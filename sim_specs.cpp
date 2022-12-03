@@ -45,12 +45,36 @@ sim_specs normal = {
     &out
 };
 
+
+nonpercentageSpecs exp1NP = {
+    10, //4594
+    15,
+    5,
+    10
+};
+
+percentageSpecs exp1P = {
+    25,
+    98,
+    98,
+    90
+};
+
+sim_specs exp1 = {
+    "Experiment 1",
+    &exp1NP,
+    &exp1P,
+    &out
+}
+
 //sim_specs sim;
 
-#ifdef SCENARIO1
-sim_specs sim = normal;
-#elif defined SCENARIO2
+#ifdef EXP1
+sim_specs sim = exp1;
+#elif defined EXP2
 sim_specs sim = scenario2;
+#elif defined EXP3
+...
 #else
 sim_specs sim = normal;
 #endif

@@ -13,7 +13,7 @@ EXE=iron_dome_sim
 
 all:
 	$(CC) $(CFLAGS) -DNORMAL $(LDFLAGS) $(SOURCES) -o $(EXE)
-#	$(CC) $(CFLAGS) -DE_PEAK $(LDFLAGS) customer.cpp data.cpp generator.cpp main.cpp -o $(EXE)_peak
+	$(CC) $(CFLAGS) -DEXP1 $(LDFLAGS) $(SOURCES) -o $(EXE)_exp1
 #	$(CC) $(CFLAGS) -DE_OPENING $(LDFLAGS) customer.cpp data.cpp generator.cpp main.cpp -o $(EXE)_opening
 #	$(CC) $(CFLAGS) -DE_CLOSING $(LDFLAGS) customer.cpp data.cpp generator.cpp main.cpp -o $(EXE)_closing
 #	$(CC) $(CFLAGS) -DE_NORMAL $(LDFLAGS) customer.cpp data.cpp generator.cpp main.cpp -o $(EXE)_normal

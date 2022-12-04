@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Juraj Mariani <xmaria03 AT stud.fit.vutbr.cz>, Lukas Macejka <xmacej03 AT stud.fit.vutbr.cz>
+ * @brief Main file, also handles summary print
  * @version 0.1
  * @date 2022-12-02
  * 
@@ -41,7 +41,7 @@ int main ()
     printf("----------------------SUMMARY----------------------\n\n");
     cout << "SCENARIO:\t" << sim.name << "\n\n";
     printf("\tMissiles launched:\t\t\t\t\t%d\n",sim.npSpecs->hamasMissileCount);
-    printf("\tInterceptor missiles launched:\t\t\t\t%d\n", sim.oSpecs->interceptorMissilesLaunched);
+    printf("\tInterceptor missiles launched:\t\t\t\t%d / %d \n", sim.oSpecs->interceptorMissilesLaunched, sim.npSpecs->interceptorMissileCount);
     printf("\tMissiles unintercepted due to interceptor shortage:\t%d\n", sim.oSpecs->unableToIntercept);
     printf("\tMissiles uncaught by radar:\t\t\t\t%d (%d of the hit)\n", sim.oSpecs->missilesMissedOnRadar, sim.oSpecs->silentHits);
     printf("\t\tThus %d missiles have been detected, equivalent to %f %% detection rate\n", (sim.npSpecs->hamasMissileCount - sim.oSpecs->missilesMissedOnRadar), ((double)(sim.npSpecs->hamasMissileCount - sim.oSpecs->missilesMissedOnRadar) / (double)sim.npSpecs->hamasMissileCount) * 100);

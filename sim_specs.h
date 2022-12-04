@@ -1,7 +1,7 @@
 /**
  * @file sim_specs.h
- * @author your name (you@domain.com)
- * @brief 
+ * @author Juraj Mariani <xmaria03 AT stud.fit.vutbr.cz>, Lukas Macejka <xmacej03 AT stud.fit.vutbr.cz>
+ * @brief Simulation variables are defined here
  * @version 0.1
  * @date 2022-12-01
  * 

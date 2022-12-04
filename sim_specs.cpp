@@ -1,7 +1,7 @@
 /**
  * @file sim_specs.cpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Juraj Mariani <xmaria03 AT stud.fit.vutbr.cz>, Lukas Macejka <xmacej03 AT stud.fit.vutbr.cz>
+ * @brief Simulation variables are set here
  * @version 0.1
  * @date 2022-12-01
  * 
@@ -26,14 +26,14 @@ nonpercentageSpecs normalNP = {
     4594, //4594
     1000,
     5,
-    10
+    8
 };
 
 percentageSpecs normalP = {
-    25,
-    98,
-    98,
-    90
+    84,
+    90,
+    95,
+    100
 };
 
 simOutput out;
@@ -45,36 +45,78 @@ sim_specs normal = {
     &out
 };
 
-
 nonpercentageSpecs exp1NP = {
-    10, //4594
-    15,
-    5,
-    10
+	100,
+	100,
+	5,
+	10
 };
 
 percentageSpecs exp1P = {
-    25,
-    98,
-    98,
-    90
+	0,
+	90,
+	95,
+	99
 };
 
-sim_specs exp1 = {
-    "Experiment 1",
-    &exp1NP,
-    &exp1P,
-    &out
-}
+sim_specs exp_1 = {
+	"Experiment 1",
+	&exp1NP,
+	&exp1P,
+	&out
+};
+
+nonpercentageSpecs exp2NP = {
+	100,
+	100,
+	5,
+	10
+};
+
+percentageSpecs exp2P = {
+	86,
+	98,
+	100,
+	100
+};
+
+sim_specs exp_2 = {
+	"Experiment 2",
+	&exp2NP,
+	&exp2P,
+	&out
+};
+
+nonpercentageSpecs exp3NP = {
+	1400,
+	80,
+	5,
+	10
+};
+
+percentageSpecs exp3P = {
+	86,
+	90,
+	95,
+	100
+};
+
+sim_specs exp_3 = {
+	"Experiment 3",
+	&exp3NP,
+	&exp3P,
+	&out
+};
+
 
 //sim_specs sim;
 
 #ifdef EXP1
-sim_specs sim = exp1;
+sim_specs sim = exp_1;
 #elif defined EXP2
-sim_specs sim = scenario2;
+sim_specs sim = exp_2;
 #elif defined EXP3
-...
+sim_specs sim = exp_3;
 #else
 sim_specs sim = normal;
 #endif

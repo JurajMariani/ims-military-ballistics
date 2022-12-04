@@ -13,20 +13,14 @@ EXE=iron_dome_sim
 
 all:
 	$(CC) $(CFLAGS) -DNORMAL $(LDFLAGS) $(SOURCES) -o $(EXE)
-	$(CC) $(CFLAGS) -DEXP1 $(LDFLAGS) $(SOURCES) -o $(EXE)_exp1
-#	$(CC) $(CFLAGS) -DE_OPENING $(LDFLAGS) customer.cpp data.cpp generator.cpp main.cpp -o $(EXE)_opening
-#	$(CC) $(CFLAGS) -DE_CLOSING $(LDFLAGS) customer.cpp data.cpp generator.cpp main.cpp -o $(EXE)_closing
-#	$(CC) $(CFLAGS) -DE_NORMAL $(LDFLAGS) customer.cpp data.cpp generator.cpp main.cpp -o $(EXE)_normal
+	$(CC) $(CFLAGS) -DEXP1	 $(LDFLAGS) $(SOURCES) -o $(EXE)_exp1
+	$(CC) $(CFLAGS) -DEXP2	 $(LDFLAGS) $(SOURCES) -o $(EXE)_exp2
+	$(CC) $(CFLAGS) -DEXP3	 $(LDFLAGS) $(SOURCES) -o $(EXE)_exp3
+	
 
-#run:
-#	@echo "Running experiments"
-#	@rm -rf ./experiments
-#	@mkdir experiments 2>/dev/null
-#	./$(EXECUTABLE) > ./experiments/typical.output
-#	./$(EXECUTABLE)_opening > ./experiments/opening.output
-#	./$(EXECUTABLE)_normal > ./experiments/normal.output
-#	./$(EXECUTABLE)_peak > ./experiments/peak.output
-#	./$(EXECUTABLE)_closing > ./experiments/closing.output
-
-#clean:
-#	@rm -rf $(EXECUTABLE)* *.o* ./experiments
+clean:
+	@rm -f $(EXE)
+	@rm -f $(EXE)_exp1
+	@rm -f $(EXE)_exp2
+	@rm -f $(EXE)_exp3
+	

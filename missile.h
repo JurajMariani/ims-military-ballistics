@@ -1,7 +1,7 @@
 /**
  * @file missile.h
- * @author your name (you@domain.com)
- * @brief 
+ * @author Juraj Mariani <xmaria03 AT stud.fit.vutbr.cz>, Lukas Macejka <xmacej03 AT stud.fit.vutbr.cz>
+ * @brief Main simulation process
  * @version 0.1
  * @date 2022-12-02
  * 
@@ -20,13 +20,6 @@ extern Queue missilesDiscovered;
 
 extern Facility radarDetector;
 extern Facility trajectoryComputation;
-
-/*extern unsigned int interceptorMissilesLaunched;
-extern unsigned int missilesMissedOnRadar;
-extern unsigned int unnecessaryLaunches;
-extern unsigned int missilesNeutralised;
-extern unsigned int interceptorFailCount;
-extern unsigned int missilesHitTarget;*/
 
 enum Target_t {
     important, not_important

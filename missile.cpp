@@ -1,7 +1,7 @@
 /**
  * @file missile.cpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Juraj Mariani <xmaria03 AT stud.fit.vutbr.cz>, Lukas Macejka <xmacej03 AT stud.fit.vutbr.cz>
+ * @brief Main simulation process
  * @version 0.1
  * @date 2022-12-02
  * 
@@ -44,16 +44,15 @@ void Missile::Behavior()
     double detected = Random() * 100;
 
     if (detected < (100 - sim.pSpecs->detectionReliability))
-    {
-        undetected();
-        if (!missileQueue.empty())
-        {
-            Missile* m = (Missile*)missileQueue.GetFirst();
-            m->Activate();
-        }
-
-        return;
-    }
+       { 	
+		undetected();
+		if (!missileQueue.empty())
+		{
+			Missile* m = (Missile*)missileQueue.GetFirst();
+			m->Activate();
+		}
+		return;
+	 }
 
     facilityUsage(radarDetector, sim.npSpecs->detectorDelay);
 
@@ -112,7 +111,7 @@ void Missile::detectedWithWrongTrajectory()
     sim.oSpecs->misinterpretedTarget++;
     if (this->target == important)
     {
-        sim.oSpecs->missilesHitTarget++;
+	sim.oSpecs->missilesHitTarget++;
         sim.oSpecs->misinterpretedNoninterceptHit++;
         return;
     }
